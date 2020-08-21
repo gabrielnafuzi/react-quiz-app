@@ -1,0 +1,22 @@
+.select-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4rem;
+}
+
+.select-block label {
+  color: var(--color-foreground);
+  margin: 0.5rem 0;
+  font: 400 2.4rem Roboto;
+  line-height: 2.8rem;
+  letter-spacing: 0.04;
+}
+
+.select-block select {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  color: var(--color-current-line);
+  background: var(--color-foreground);
+}

@@ -1,0 +1,141 @@
+.question-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  max-width: 780px;
+  height: 200px;
+  padding: 0 0.2rem;
+
+  font: 400 1.1rem Roboto;
+  text-align: center;
+
+  background: var(--color-current-line);
+  border: 1px solid var(--color-cyan);
+  color: var(--color-foreground);
+  border-radius: 0.8rem;
+}
+
+.question-box__counter {
+  position: absolute;
+  top: -1.4rem;
+  letter-spacing: 0.145rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  background: var(--color-current-line);
+  border: 1px solid var(--color-cyan);
+  border-radius: 0.8rem;
+}
+
+.answers {
+  margin-top: 2rem;
+  width: 96%;
+  max-width: 780px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.answers__item {
+  padding: 1.2rem;
+  cursor: pointer;
+  color: var(--color-foreground);
+  font: 700 1.4rem Roboto;
+  line-height: 1.6rem;
+  background: var(--color-comment);
+  border: 2px solid transparent;
+  border-radius: 0.8rem;
+  transition: opacity 0.3s ease;
+}
+
+.answers__item:hover {
+  opacity: 0.7;
+}
+
+.correct {
+  border-color: var(--color-green);
+  animation: up-and-down 1s;
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(-6px);
+  }
+
+  66% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.incorrect {
+  border-color: var(--color-red);
+}
+
+.next-question {
+  display: flex;
+  margin-top: 2rem;
+  width: 96%;
+  height: 4rem;
+  max-width: 780px;
+  justify-content: flex-end;
+}
+
+.next-question__btn {
+  font: 500 1.5rem Roboto;
+  letter-spacing: 0.04rem;
+  padding: 0.8rem 4.2rem;
+  cursor: pointer;
+  background: var(--color-orange);
+  color: var(--color-current-line);
+  border: none;
+  border-radius: 0.4rem;
+  transition: opacity 0.2s ease;
+}
+
+.next-question__btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 425px) {
+  .question-box {
+    height: 140px;
+    font-size: 1.1rem;
+  }
+
+  .answers {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 1.8rem;
+  }
+
+  .answers__item {
+    padding: 1.4rem 1rem;
+  }
+
+  .next-question {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .question-box {
+    height: 120px;
+    font-size: 1rem;
+  }
+
+  .answers__item {
+    line-height: 1.2rem;
+  }
+}

@@ -1,0 +1,23 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer__description {
+  font: 700 1.5rem Roboto;
+  letter-spacing: 0.04rem;
+  color: var(--color-foreground);
+}
+
+.footer_description__name {
+  color: var(--color-purple);
+  text-decoration: none;
+}
+
+.footer_description__name:hover {
+  text-decoration: underline;
+}
