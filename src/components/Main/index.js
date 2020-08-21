@@ -59,16 +59,18 @@ function Main() {
     <Form fetchData={fetchData} />
   ) : questions.length > 0 ? (
     currentIndex >= questions.length ? (
-      <div className="score">
-        <h1>
-          Game ended! <br /> Your score was: {score}
-        </h1>
-        <button
-          onClick={() => window.location.reload(false)}
-          className="score__play-again"
-        >
-          Play again
-        </button>
+      <div className="container">
+        <div className="score">
+          <h1>
+            Game ended! <br /> Your score was: {score}
+          </h1>
+          <button
+            onClick={() => window.location.reload(false)}
+            className="score__play-again"
+          >
+            Play again
+          </button>
+        </div>
       </div>
     ) : (
       <div className="container">
